@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['juanmanuelramallo@hey.com']
 
   spec.summary       = 'RSpec custom matcher to test code that logs information into log files.'
-  spec.description   = 'Logs are an easy way to store any kind of information for further '\
+  spec.description   = 'Writing logs is an easy way to store any kind of information for further '\
                        'analysis later on. It\'s commonly used to store analytics events '\
                        'and then make the logs a source for data engineering tasks. This '\
                        'matcher makes logging testing easier.'

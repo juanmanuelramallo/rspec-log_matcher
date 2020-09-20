@@ -3,11 +3,13 @@
 module RSpec
   module LogMatcher
     class Matcher
+      LOG_PATH = ENV.fetch('LOG_PATH', 'log/test.log')
+
       attr_reader :expected_logs, :initial_log_file_position
 
-      def initialize(expected_logs, initial_log_file_position = 0)
+      def initialize(expected_logs, initial_log_file_position)
         @expected_logs = expected_logs
-        @initial_log_file_position = initial_log_file_position
+        @initial_log_file_position = initial_log_file_position || 0
       end
 
       def matches?(subject)
@@ -17,8 +19,7 @@ module RSpec
         when Regexp
           logs.match?(expected_logs)
         when Proc
-          expected_logs.call
-          logs.include?(expected_logs)
+          logs.include?(expected_logs.call)
         when String
           logs.include?(expected_logs)
         end
@@ -47,11 +48,10 @@ module RSpec
       end
 
       def prepare_matcher(subject)
-        case subject
-        when Proc
+        if subject.is_a?(Proc)
           log_file.seek(0, IO::SEEK_END)
           subject.call
-        when Capybara::Session
+        elsif defined?(Capybara::Session) && subject.is_a?(Capybara::Session)
           log_file.seek(initial_log_file_position)
         end
       end

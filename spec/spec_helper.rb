@@ -7,7 +7,7 @@ SimpleCov.start do
   add_filter '/spec/'
 end
 
-require 'rspec/log_matcher'
+require 'rspec-log_matcher'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

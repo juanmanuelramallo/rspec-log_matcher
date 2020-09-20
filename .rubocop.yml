@@ -98,3 +98,4 @@ Style/HashTransformValues:
 Naming/FileName:
   Exclude:
     - 'lib/rspec-log_matcher.rb'
+    - 'spec/rspec-log_matcher_spec.rb'
