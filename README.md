@@ -1,5 +1,10 @@
 # RSpec::LogMatcher
 
+[![Gem Version](https://badge.fury.io/rb/rspec-log_matcher.svg)](https://badge.fury.io/rb/rspec-log_matcher)
+[![ci](https://github.com/juanmanuelramallo/rspec-log_matcher/workflows/ci/badge.svg?branch=master)](https://github.com/juanmanuelramallo/rspec-log_matcher/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/145ad4334a67d5e1f8a2/maintainability)](https://codeclimate.com/github/juanmanuelramallo/rspec-log_matcher/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/145ad4334a67d5e1f8a2/test_coverage)](https://codeclimate.com/github/juanmanuelramallo/rspec-log_matcher/test_coverage)
+
 ## What is this?
 An RSpec custom matcher to test code that logs information into log files.
 
