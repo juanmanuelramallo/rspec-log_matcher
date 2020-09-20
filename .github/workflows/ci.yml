@@ -26,7 +26,7 @@ jobs:
         chmod +x ./cc-test-reporter
         ./cc-test-reporter before-build
       env:
-        CC_TEST_REPORTER_ID: get_a_test_reporter_id_from_code_climate
+        CC_TEST_REPORTER_ID: '4353dd7119b5418573402ca23dbba350fc7fbf25369bd407f2d41350e1991b30'
     - name: Install and config bundler
       run: |
         gem install bundler:1.17.3
@@ -41,9 +41,9 @@ jobs:
       run: |
         bundle config set path 'vendor/bundle'
         bundle install --jobs 4 --retry 3
-    - name: Run code analysis
+    - name: Run rubocop
       run: |
-        bundle exec rake code_analysis
+        bundle exec rubocop
     - name: Run tests
       run: |
         bundle exec rspec
@@ -51,4 +51,4 @@ jobs:
       run: |
         ./cc-test-reporter after-build --exit-code 0
       env:
-        CC_TEST_REPORTER_ID: get_a_test_reporter_id_from_code_climate
+        CC_TEST_REPORTER_ID: '4353dd7119b5418573402ca23dbba350fc7fbf25369bd407f2d41350e1991b30' 

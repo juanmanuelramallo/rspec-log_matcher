@@ -1,3 +1,6 @@
+AllCops:
+  NewCops: enable
+
 Style/Documentation:
   Enabled: false
 
@@ -91,3 +94,7 @@ Style/HashTransformKeys:
 
 Style/HashTransformValues:
   Enabled: true
+
+Naming/FileName:
+  Exclude:
+    - 'lib/rspec-log_matcher.rb'
