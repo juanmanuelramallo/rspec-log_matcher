@@ -24,6 +24,16 @@ And then execute:
 
     $ bundle install
 
+Lastly, in your `spec_helper.rb` (or `rails_helper.rb`) add the following line inside the configuration block:
+
+```ruby
+RSpec.configure do |config|
+  # [snip]
+
+  RSpec::LogMatcher.configure!(config)
+end
+```
+
 ## Usage
 
 ### Plain old ruby objects
