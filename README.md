@@ -60,9 +60,9 @@ end
 require 'spec_helper'
 
 RSpec.describe 'Users' do
-    describe 'GET /index' do
-        expect { get(users_path) }.to log('Page view - Users index')
-    end
+  describe 'GET /index' do
+    expect { get(users_path) }.to log('Page view - Users index')
+  end
 end
 ```
 
