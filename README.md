@@ -53,7 +53,7 @@ end
 # spec/services/payment_service_spec.rb
 require 'spec_helper'
 
-RSpec.describe PaymentService
+RSpec.describe PaymentService do
   describe '.call' do
     subject { described_class.call }
 
